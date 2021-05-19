@@ -17,3 +17,13 @@ input {
     width: 300px;
     padding: 10px;
 }
+
+.text-checked {
+    text-decoration: line-through;
+    cursor: pointer;
+}
+
+.text-normal {
+    text-decoration: none;
+    cursor: pointer;
+}

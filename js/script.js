@@ -40,8 +40,11 @@ var app = new Vue(
         methods:
         {
             removeToDo: function(indexToRemove) {
+
+                var myIndex = indexToRemove;
                 // console.log("removeToDo" , indexToRemove);
-                this.toDoList.splice(indexToRemove, 1);
+                this.toDoList.splice(myIndex, 1);
+                
             },
             
             addToDo: function() {
@@ -55,8 +58,10 @@ var app = new Vue(
                 }
             },
             
-            lineTrough: function(index) {
-                this.toDoList(index).completed = true;
+            lineThrough: function(list) {
+                list.completed = !list.completed;
+                console.log(list.completed);
+
             }
         }
     }

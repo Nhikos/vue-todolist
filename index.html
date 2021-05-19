@@ -20,9 +20,13 @@
             </div>
 
             <ul v-if="toDoList.length > 0">
-                <li v-for="(toDo , index) in toDoList"
-                @click="lineTrough(index)"> 
-                    {{ toDo.text }} 
+                <li v-for="(toDo , index) in toDoList">
+
+                    <span @click="lineThrough(toDo)"
+                    :class="toDo.completed ? 'text-checked' : 'text-normal' ">
+                        {{ toDo.text }} 
+                    </span>
+
                     <i class="fas fa-times-circle"
                     @click="removeToDo(index)"></i>
                 </li>

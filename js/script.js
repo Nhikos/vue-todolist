@@ -32,22 +32,31 @@ var app = new Vue(
                 {
                     text: "Mettere la lavatrice",
                     completed: false
-                }
+                },
             ],
-            newToDo: "",
+            newToDo: '',
         },
-        methods: 
+
+        methods:
         {
             removeToDo: function(indexToRemove) {
                 // console.log("removeToDo" , indexToRemove);
                 this.toDoList.splice(indexToRemove, 1);
             },
+            
             addToDo: function() {
                 if(this.newToDo.trim().length > 0) {
-                    this.toDoList.push(this.newToDo);
+                    this.toDoList.push({
+                        text: this.newToDo,
+                        completed: false
+                    });
                     // riga sotto svuota il pannello dell'input
                     this.newToDo = "";
                 }
+            },
+            
+            lineTrough: function(index) {
+                this.toDoList(index).completed = true;
             }
         }
     }

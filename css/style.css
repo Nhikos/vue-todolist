@@ -1,0 +1,19 @@
+li {
+    font-size: 24px;
+    line-height: 30px;
+    padding: 10px, 0px;
+    text-transform: capitalize;
+}
+
+.fa-times-circle {
+    cursor: pointer;
+}
+.fa-times-circle:hover {
+    color: red;
+}
+
+input {
+    font-size: 20px;
+    width: 300px;
+    padding: 10px;
+}
